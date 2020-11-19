@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal - JavaScript</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <button data-modal="abrir">Abrir modal</button>
+    <button data-modal="abrir-modal-dois">Abrir modal 2</button>
+
+    <section class="modal-container" data-modal="container">
+      <div class="modal">
+        <button data-modal="fechar" class="fechar"></button>
+        <form action="">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" id="senha" />
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="modal-container" data-modal="container-modal-dois">
+      <div class="modal">
+        <button data-modal="fechar-modal-dois" class="fechar"></button>
+        <h1>Olá</h1>
+      </div>
+    </section>
+
+    <script src="./dist/modal.js"></script>
+    <script>
+      const modal1 = new Modal(
+        '[data-modal="abrir"]',
+        '[data-modal="fechar"]',
+        '[data-modal="container"]'
+      );
+      modal1.init();
+
+      const modal2 = new Modal(
+        '[data-modal="abrir-modal-dois"]',
+        '[data-modal="fechar-modal-dois"]',
+        '[data-modal="container-modal-dois"]'
+      );
+      modal2.init();
+    </script>
+  </body>
+</html>
