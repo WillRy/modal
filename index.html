@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal - JavaScript</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <button data-modal="abrir">Abrir modal</button>
+    <section class="modal-container" data-modal="container">
+      <div class="modal">
+        <button data-modal="fechar" class="fechar"></button>
+        <form action="">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" id="senha" />
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+    </section>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
